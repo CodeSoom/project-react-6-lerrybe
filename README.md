@@ -16,7 +16,7 @@ npm start
 npm run lint
 ```
 
-## 테스트 실행하기
+### 테스트 실행하기
 ```
 npm test
 ```
