@@ -12,4 +12,12 @@ module.exports = {
       runtime: 'automatic',
     }],
   ],
+  plugins: [
+    [
+      '@babel/plugin-transform-react-jsx',
+      {
+        runtime: 'automatic',
+      },
+    ],
+  ],
 };

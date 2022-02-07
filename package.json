@@ -39,12 +39,16 @@
   "dependencies": {
     "@emotion/core": "^11.0.0",
     "@emotion/styled": "^11.6.0",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "raw-loader": "^4.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
+    "style-loader": "^3.3.1",
     "styled-components": "^5.3.3",
     "styled-reset": "^4.3.4"
   }
