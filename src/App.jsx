@@ -12,6 +12,7 @@ import BoxOfficePage from './pages/BoxOfficePage';
 import MainPage from './pages/MainPage';
 import MyOstPage from './pages/MyOstPage';
 import SearchFilmPage from './pages/SearchFilmPage';
+import ShowDetailFilmPage from './pages/ShowDetailFilmPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/boxoffice" element={<BoxOfficePage />} />
         <Route path="/search" element={<SearchFilmPage />} />
         <Route path="/myost" element={<MyOstPage />} />
+        <Route path="/show" element={<ShowDetailFilmPage />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </div>
