@@ -5,6 +5,7 @@ import {
 
 // styles
 import { Reset } from 'styled-reset';
+import './styles/global.css';
 
 // Components
 import BoxOfficePage from './pages/BoxOfficePage';
@@ -15,7 +16,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 export default function App() {
   return (
-    <>
+    <div className="container">
       <Reset />
       <div>🎥 Welcome to MIFILM! 📻</div>
       <Routes>
@@ -25,6 +26,6 @@ export default function App() {
         <Route path="/myost" element={<MyOstPage />} />
         <Route path="/*" element={<NotFoundPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
