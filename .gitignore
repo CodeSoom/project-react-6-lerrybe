@@ -1,35 +1,17 @@
-# Mac OS x
+## Mac OS x
 .DS_*
 
-# IntelliJ
+## IntelliJ
 .idea
 
-# VS Code
+## VS Code
 .vscode
 
-# CodeceptJS
+## CodeceptJS
 output
 
-# Jest
+## Node.js
+node_modules
+
+## Jest
 coverage
-
-# dependencies
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
