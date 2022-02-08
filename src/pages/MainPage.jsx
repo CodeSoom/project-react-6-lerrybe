@@ -1,7 +1,9 @@
+import MainContainer from '../containers/MainContainer';
+
 export default function MainPage() {
   return (
     <>
-      <div>MIFILM</div>
+      <MainContainer />
     </>
   );
 }
