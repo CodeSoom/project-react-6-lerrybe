@@ -1,7 +1,7 @@
 export default function MyOstContainer() {
   return (
     <>
-      <div>MyOstContainer</div>
+      <div>MY OST</div>
     </>
   );
 }

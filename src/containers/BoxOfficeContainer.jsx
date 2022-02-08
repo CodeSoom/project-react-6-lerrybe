@@ -1,7 +1,7 @@
 export default function BoxOfficeContainer() {
   return (
     <>
-      <div>BoxOfficeContainer</div>
+      <div>Box Office</div>
     </>
   );
 }

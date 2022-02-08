@@ -1,7 +1,7 @@
 export default function SearchFilmContainer() {
   return (
     <>
-      <div>SearchFilmContainer</div>
+      <div>영화 찾기</div>
     </>
   );
 }
