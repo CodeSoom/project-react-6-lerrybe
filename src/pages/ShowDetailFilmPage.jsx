@@ -1,7 +1,9 @@
+import ShowDetailFilmContainer from '../containers/ShowDetailFilmContainer';
+
 export default function ShowDetailFilmPage() {
   return (
     <>
-      <div>ShowDetailFilmPage</div>
+      <ShowDetailFilmContainer />
     </>
   );
 }

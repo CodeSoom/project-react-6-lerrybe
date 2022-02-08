@@ -1,7 +1,9 @@
+import SearchFilmContainer from '../containers/SearchFilmContainer';
+
 export default function SearchFilmPage() {
   return (
     <>
-      <div>SearchFilmPage</div>
+      <SearchFilmContainer />
     </>
   );
 }

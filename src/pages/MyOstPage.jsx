@@ -1,7 +1,9 @@
+import MyOstContainer from '../containers/MyOstContainer';
+
 export default function MyOstPage() {
   return (
     <>
-      <div>MyOstPage</div>
+      <MyOstContainer />
     </>
   );
 }
