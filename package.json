@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve",
-    "test:e2e": "codeceptjs run --steps",
-    "test": "start-server-and-test start http://localhost:8080 test:e2e",
+    "test:unit": "jest",
+    "coverage": "npm run test:unit -- --coverage",
+    "test": "npm run coverage && start-server-and-test start http://localhost:8080 test:e2e",
     "lint": "eslint --ext js,jsx ."
   },
   "keywords": [],
@@ -15,7 +16,6 @@
     "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.14.0",
     "@babel/preset-react": "^7.16.0",
-    "@codeceptjs/configure": "^0.6.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.4.0",
@@ -28,9 +28,11 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "given2": "^2.1.7",
     "jest": "^27.4.7",
     "jest-plugin-context": "^2.9.0",
     "puppeteer": "^9.0.0",
+    "redux-mock-store": "^1.5.4",
     "start-server-and-test": "^1.12.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
@@ -38,6 +40,7 @@
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "css-loader": "^6.6.0",
     "file-loader": "^6.2.0",
@@ -50,6 +53,7 @@
     "redux-thunk": "^2.4.1",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.3",
-    "styled-reset": "^4.3.4"
+    "styled-reset": "^4.3.4",
+    "url-loader": "^4.1.1"
   }
 }

@@ -15,8 +15,23 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: 'file-loader',
+        test: /\.png$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          esModule: false,
+        },
+      },
+      {
+        test: /\.(png|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[name].[ext]?[hash]',
+            },
+          },
+        ],
       },
       {
         test: /\.txt$/,
@@ -35,5 +50,9 @@ module.exports = {
   mode: 'production',
   output: {
     filename: 'main.js',
+    publicPath: '/',
+  },
+  performance: {
+    hints: false,
   },
 };
