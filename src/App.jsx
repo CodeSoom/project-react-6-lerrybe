@@ -6,6 +6,7 @@ import {
 // styles
 import { Reset } from 'styled-reset';
 import Container from './styles/Container';
+import './styles/css/reset.css';
 
 // Components
 import BoxOfficePage from './pages/BoxOfficePage';

@@ -6,6 +6,7 @@ const Container = styled.div`
   height: 100vh;
   background: url('../img/space.svg');
   background-size: 100vw auto;
+  font-family: 'DungGeunMo';
 `;
 
 export default Container;
