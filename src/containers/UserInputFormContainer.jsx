@@ -3,8 +3,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 
-import UserInputForm from './UserInputForm';
-import LoggedinUsername from './LoggedinUsername';
+import UserInputForm from '../components/UserInputForm';
+import LoggedinUsername from '../components/LoggedinUsername';
 
 import { get } from '../utils/utils';
 import { login } from '../_actions/actions';
