@@ -3,7 +3,12 @@ const initialState = {
 };
 
 const reducers = {
-
+  login(state, { payload: { inputUsername } }) {
+    return {
+      ...state,
+      inputUsername,
+    };
+  },
 };
 
 function defaultReducer(state) {
