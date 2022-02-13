@@ -31,7 +31,7 @@ describe('BoxOfficeContainer', () => {
     );
 
     expect(container).toHaveTextContent('날짜');
-    expect(container).toHaveTextContent('한국영화');
+    expect(container).toHaveTextContent('외국영화');
   });
 
   context('영화 목록이 렌더링 되었을 때', () => {
