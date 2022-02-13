@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 
+import { Link } from 'react-router-dom';
+
 import styled from '@emotion/styled';
 
 import { get } from '../utils/utils';
@@ -20,10 +22,15 @@ const MovieList = styled.li`
   font-size: 25px;
   font-weight: 600;
   font-family: DungGeunMo;
-  /* color: #000000; */
   color: #d7dfeb;
-  /* text-shadow: -1.5px 0 white, 0 1.5px white, 1.5px 0 white, 0 -1.5px white; */
   margin-bottom: 23px;
+`;
+
+const StyledLink = styled(Link)`
+  color: #d7dfeb;
+  &:hover {
+    color: #FFD717;
+  }
 `;
 
 export default function BoxOfficeContainer() {
@@ -42,7 +49,11 @@ export default function BoxOfficeContainer() {
         {dailyBoxOfficeList && dailyBoxOfficeList.length !== 0 ? (
           <ol>
             {dailyBoxOfficeList.map((movie) => (
-              <MovieList key={movie.rank}>{`${movie.rank}) ${movie.movieNm}`}</MovieList>
+              <MovieList key={movie.rank}>
+                <StyledLink to={`/show/${movie.movieNm}`}>
+                  {`${movie.rank}) ${movie.movieNm}`}
+                </StyledLink>
+              </MovieList>
             ))}
           </ol>
         ) : (

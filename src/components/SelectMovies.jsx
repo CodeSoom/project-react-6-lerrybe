@@ -89,7 +89,7 @@ export default function SelectMovies() {
         name="nation"
         onChange={handleChangeNation}
       >
-        <option value="" selected="selected">전체</option>
+        <option value="" defaultValue>전체</option>
         <option value="F">외국영화</option>
       </NationSelect>
 
