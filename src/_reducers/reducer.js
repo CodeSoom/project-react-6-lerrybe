@@ -9,6 +9,13 @@ const reducers = {
       inputUsername,
     };
   },
+
+  setDailyBoxOfficeList(state, { payload: { dailyBoxOfficeList } }) {
+    return {
+      ...state,
+      dailyBoxOfficeList,
+    };
+  },
 };
 
 function defaultReducer(state) {
