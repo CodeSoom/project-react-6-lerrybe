@@ -9,6 +9,7 @@ const Container = styled.div`
   height: 100vh;
   background: url('../img/space.svg');
   background-size: 100vw auto;
+  color: white;
   font-family: 'DungGeunMo';
   cursor: url('../img/cursor.svg'), auto;
   & div {
