@@ -51,9 +51,9 @@ describe('App', () => {
     });
   });
 
-  context('path 가 /show 일 때', () => {
+  context('path 가 /show/:movie 일 때', () => {
     it('ShowDetailFilmPage 를 렌더링 한다.', () => {
-      const { container } = renderApp({ path: '/show' });
+      const { container } = renderApp({ path: '/show/:movie' });
 
       expect(container).toHaveTextContent('영화 정보');
     });

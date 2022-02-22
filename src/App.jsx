@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/boxoffice" element={<BoxOfficePage />} />
           <Route path="/search" element={<SearchFilmPage />} />
           <Route path="/myost" element={<MyOstPage />} />
-          <Route path="/show" element={<ShowDetailFilmPage />} />
+          <Route path="/show/:movie" element={<ShowDetailFilmPage />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
       </Container>

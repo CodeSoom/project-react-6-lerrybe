@@ -5,6 +5,8 @@ import github from '../img/github.svg';
 import react from '../img/react.svg';
 import velog from '../img/velog.svg';
 
+import SubIconImg from '../styles/SubIconImg';
+
 const SubIconWrapDiv = styled.div`
   width: 100%;
   display: flex;
@@ -13,12 +15,6 @@ const SubIconWrapDiv = styled.div`
   box-sizing: border-box;
   position: absolute;
   bottom: 30px;
-`;
-
-const SubIconImg = styled.img`
-  width: 60px;
-  height: 60px;
-  margin-right: 12px;
 `;
 
 export default function MainSubIcon() {
