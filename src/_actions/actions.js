@@ -20,6 +20,13 @@ export function setDailyBoxOfficeList(dailyBoxOfficeList) {
   };
 }
 
+export function setDetailMovieInfo(movieItem) {
+  return {
+    type: 'setDetailMovieInfo',
+    payload: { movieItem },
+  };
+}
+
 export function loadDailyBoxOfficeList({ date, nation }) {
   return async (dispatch) => {
     const data = await fetchDailyBoxOfficeList({ date, nation });
@@ -29,9 +36,11 @@ export function loadDailyBoxOfficeList({ date, nation }) {
 }
 
 export function loadDetailMovieInfo(movie) {
-  return async () => {
+  return async (dispatch) => {
     const data = await fetchDetailMovieInfo(movie);
     const { items } = data;
-    console.log(items);
+    const result = items.filter((item) => item.replace('<b>', '').replace('</b>', '').replaceAll(' ', '') === movie);
+    const movieItem = result[0] || '';
+    dispatch(setDetailMovieInfo(movieItem));
   };
 }

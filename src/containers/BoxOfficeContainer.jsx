@@ -50,7 +50,7 @@ export default function BoxOfficeContainer() {
           <ol>
             {dailyBoxOfficeList.map((movie) => (
               <MovieList key={movie.rank}>
-                <StyledLink to={`/show/${movie.movieNm}`}>
+                <StyledLink to={`/show/${movie.movieNm.replaceAll(' ', '')}`}>
                   {`${movie.rank}) ${movie.movieNm}`}
                 </StyledLink>
               </MovieList>

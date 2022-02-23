@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const KOFIC_API_KEY = process.env.REACT_APP_KOFIC_API_KEY;
 const NAVER_MOVIE_CLIENT_ID = process.env.REACT_APP_NAVER_MOVIE_CLIENT_ID;
 const NAVER_MOVIE_CLIENT_SECRET = process.env.REACT_APP_NAVER_MOVIE_CLIENT_SECRET;
@@ -12,17 +14,15 @@ export async function fetchDailyBoxOfficeList({ date, nation }) {
 
 export async function fetchDetailMovieInfo(movie) {
   const url = '/v1/search/movie.json';
-  const response = await fetch(url, {
-    method: 'GET',
+  const response = await axios.get(url, {
     params: {
       query: movie,
-      display: 10,
+      display: 20,
     },
     headers: {
       'X-Naver-Client-Id': NAVER_MOVIE_CLIENT_ID,
       'X-Naver-Client-Secret': NAVER_MOVIE_CLIENT_SECRET,
     },
   });
-  const data = await response.json();
-  return data;
+  return response.data;
 }

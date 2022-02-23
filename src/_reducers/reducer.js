@@ -16,6 +16,13 @@ const reducers = {
       dailyBoxOfficeList,
     };
   },
+
+  setDetailMovieInfo(state, { payload: { setDetailMovieInfo } }) {
+    return {
+      ...state,
+      setDetailMovieInfo,
+    };
+  },
 };
 
 function defaultReducer(state) {
