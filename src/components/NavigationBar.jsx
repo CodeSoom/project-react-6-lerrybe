@@ -38,9 +38,7 @@ const NavIconImg = styled.img`
 export default function NavigationBar() {
   return (
     <NavigationDiv>
-      <NavTitleDiv>
-        MIFILM
-      </NavTitleDiv>
+      <NavTitleDiv>MIFILM</NavTitleDiv>
       <NavIconDiv>
         <Link to="/"><NavIconImg src={home} alt="home" /></Link>
       </NavIconDiv>
