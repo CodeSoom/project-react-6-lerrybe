@@ -39,8 +39,9 @@ export function loadDetailMovieInfo(movie) {
   return async (dispatch) => {
     const data = await fetchDetailMovieInfo(movie);
     const { items } = data;
-    const result = items.filter((item) => item.replace('<b>', '').replace('</b>', '').replaceAll(' ', '') === movie);
+    const result = items.filter((item) => item.title.replace('<b>', '').replace('</b>', '').replaceAll(' ', '') === movie);
     const movieItem = result[0] || '';
+    console.log(movieItem);
     dispatch(setDetailMovieInfo(movieItem));
   };
 }
