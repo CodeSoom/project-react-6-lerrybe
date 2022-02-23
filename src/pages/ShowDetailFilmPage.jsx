@@ -13,7 +13,7 @@ const ShowDetailFilmWrapDiv = styled.div`
 `;
 export default function ShowDetailFilmPage({ params }) {
   const { movie } = params || useParams();
-  saveItem('movie', movie.replaceAll(' ', ''));
+  saveItem('movie', movie.replace(/ /gi, ''));
 
   return (
     <ShowDetailFilmWrapDiv>
