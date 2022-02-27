@@ -39,7 +39,7 @@ describe('App', () => {
     it('SearchFilmPage 를 렌더링 한다.', () => {
       const { container } = renderApp({ path: '/search' });
 
-      expect(container).toHaveTextContent('영화 찾기');
+      expect(container).toHaveTextContent('Search Movie');
     });
   });
 
@@ -47,7 +47,7 @@ describe('App', () => {
     it('MyOstPage 를 렌더링 한다.', () => {
       const { container } = renderApp({ path: '/myost' });
 
-      expect(container).toHaveTextContent('MY OST');
+      expect(container).toHaveTextContent('My Ost');
     });
   });
 
@@ -55,7 +55,7 @@ describe('App', () => {
     it('ShowDetailFilmPage 를 렌더링 한다.', () => {
       const { container } = renderApp({ path: '/show/:movie' });
 
-      expect(container).toHaveTextContent('영화');
+      expect(container).toHaveTextContent('영화 정보');
     });
   });
 
