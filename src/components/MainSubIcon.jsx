@@ -20,7 +20,7 @@ const SubIconWrapDiv = styled.div`
 export default function MainSubIcon() {
   return (
     <SubIconWrapDiv>
-      <a href="https://github.com/CodeSoom/project-react-6-lerrybe">
+      <a href="https://github.com/lerrybe">
         <SubIconImg src={github} alt="github" />
       </a>
       <a href="https://www.codesoom.com/">
