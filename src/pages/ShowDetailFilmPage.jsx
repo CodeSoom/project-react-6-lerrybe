@@ -11,6 +11,7 @@ import ShowDetailFilmContainer from '../containers/ShowDetailFilmContainer';
 const ShowDetailFilmWrapDiv = styled.div`
   display: flex;
 `;
+
 export default function ShowDetailFilmPage({ params }) {
   const { movie } = params || useParams();
   saveItem('movie', movie.replace(/ /gi, ''));
