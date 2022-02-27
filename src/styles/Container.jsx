@@ -7,6 +7,7 @@ import '../img/cursor-select.svg';
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
+  box-sizing: border-box;
   background: url('../img/space.svg');
   background-size: 100vw auto;
   color: white;

@@ -1,5 +1,10 @@
 import styled from '@emotion/styled';
 
+export const ContentsSubTitleDiv = styled.div`
+  font-size: 30px;
+  margin-bottom: 25px;
+`;
+
 export const ContentsTitleDiv = styled.div`
   font-size: 50px;
 `;

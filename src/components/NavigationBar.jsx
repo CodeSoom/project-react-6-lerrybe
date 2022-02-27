@@ -13,7 +13,6 @@ const NavigationDiv = styled.div`
   background: rgba(255, 255, 255, 0.23);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `;
 
@@ -22,6 +21,7 @@ const NavTitleDiv = styled.div`
   padding-bottom: 10px;
   font-size: 40px;
   border-bottom: 3px solid white;
+  margin-top: 100px;
 `;
 
 const NavIconDiv = styled.div`
