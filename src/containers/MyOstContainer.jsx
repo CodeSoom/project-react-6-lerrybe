@@ -1,10 +1,37 @@
+import { useDispatch, useSelector } from 'react-redux';
+
+import styled from '@emotion/styled';
+
+import { setSelectedMusic } from '../_actions/actions';
+
+import { get } from '../utils/utils';
+
 import myost from '../img/myost.svg';
 
+import PlayItem from '../components/PlayItem';
+
 import ContainerWrapDiv from '../styles/ContainerWrapDiv';
-import { ContentsTitleDiv, ContentsTitleWrapDiv } from '../styles/ContentsTitleDiv';
 import SubIconImg from '../styles/SubIconImg';
+import {
+  ContentsSubTitleDiv,
+  ContentsTitleDiv,
+  ContentsTitleWrapDiv,
+} from '../styles/ContentsTitleDiv';
+
+const LikedMusicTitleDiv = styled.div`
+  font-size: 20px;
+  margin-bottom: 15px;
+`;
 
 export default function MyOstContainer() {
+  const dispatch = useDispatch();
+
+  const storedLikedMusicList = useSelector(get('storedLikedMusicList'));
+
+  const handleClickSelectedMusic = (item) => {
+    dispatch(setSelectedMusic(item));
+  };
+
   return (
     <ContainerWrapDiv>
       <ContentsTitleWrapDiv>
@@ -12,8 +39,22 @@ export default function MyOstContainer() {
         <ContentsTitleDiv>My Ost</ContentsTitleDiv>
       </ContentsTitleWrapDiv>
 
-      <div>내가 좋아하는 OST</div>
-      <div>리스트</div>
+      <ContentsSubTitleDiv>내가 좋아하는 OST</ContentsSubTitleDiv>
+      {!storedLikedMusicList || storedLikedMusicList.length === 0 ? (
+        <LikedMusicTitleDiv>
+          좋아요를 누른 OST가 없습니다.
+        </LikedMusicTitleDiv>
+      ) : (
+        <>
+          {storedLikedMusicList.map((item) => (
+            <PlayItem
+              title={item.snippet.title}
+              image={item.snippet.thumbnails.default.url}
+              handleClickSelectedMusic={() => handleClickSelectedMusic(item)}
+            />
+          ))}
+        </>
+      )}
     </ContainerWrapDiv>
   );
 }
