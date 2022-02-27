@@ -1,4 +1,5 @@
 {
+  "homepage": "https://codesoom.github.io/project-react-6-lerrybe",
   "name": "project-mifilm",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,7 +8,10 @@
     "test:unit": "jest",
     "coverage": "npm run test:unit -- --coverage",
     "test": "npm run coverage && start-server-and-test start http://localhost:8080 test:e2e",
-    "lint": "eslint --ext js,jsx ."
+    "lint": "eslint --ext js,jsx .",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist --remote upstream"
   },
   "keywords": [],
   "author": "",
@@ -48,6 +52,7 @@
     "css-loader": "^6.6.0",
     "dotenv": "^16.0.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "http-proxy-middleware": "^2.0.3",
     "process": "^0.11.10",
     "raw-loader": "^4.0.2",
