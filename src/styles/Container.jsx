@@ -22,6 +22,15 @@ const Container = styled.div`
   & input {
     cursor: url('../img/cursor-input.svg'), auto;
   }
+  @keyframes fadein {
+    from { 
+      opacity: 0; 
+    }
+    to { 
+      opacity: 1; 
+    }
+  }
+  animation: fadein 2s;
 `;
 
 export default Container;
