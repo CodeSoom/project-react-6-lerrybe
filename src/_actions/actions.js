@@ -1,6 +1,7 @@
 import {
   fetchDailyBoxOfficeList,
   fetchDetailMovieInfo,
+  fetchMusic,
 } from '../_services/api';
 
 import { saveItem } from '../_services/storage';
@@ -20,10 +21,38 @@ export function setDailyBoxOfficeList(dailyBoxOfficeList) {
   };
 }
 
-export function setDetailMovieInfo(movieItem) {
+export function setDetailMovieInfo(movieInfo) {
   return {
     type: 'setDetailMovieInfo',
-    payload: { movieItem },
+    payload: { movieInfo },
+  };
+}
+
+export function setSearchedMovieList(items) {
+  return {
+    type: 'setSearchedMovieList',
+    payload: { items },
+  };
+}
+
+export function setMusicList(musicList) {
+  return {
+    type: 'setMusicList',
+    payload: { musicList },
+  };
+}
+
+export function setSelectedMusic(selectedMusic) {
+  return {
+    type: 'setSelectedMusic',
+    payload: { selectedMusic },
+  };
+}
+
+export function setLikedMusicList(storedLikedMusicList) {
+  return {
+    type: 'setLikedMusicList',
+    payload: { storedLikedMusicList },
   };
 }
 
@@ -40,8 +69,22 @@ export function loadDetailMovieInfo(movie) {
     const data = await fetchDetailMovieInfo(movie);
     const { items } = data;
     const result = items.filter((item) => item.title.replace('<b>', '').replace('</b>', '').replaceAll(' ', '') === movie);
-    const movieItem = result[0] || '';
-    console.log(movieItem);
-    dispatch(setDetailMovieInfo(movieItem));
+    const movieInfo = result[0];
+    dispatch(setDetailMovieInfo(movieInfo));
+  };
+}
+
+export function loadSearchedMovieList(movie) {
+  return async (dispatch) => {
+    const data = await fetchDetailMovieInfo(movie);
+    const { items } = data;
+    dispatch(setSearchedMovieList(items));
+  };
+}
+
+export function loadMusicList(movie) {
+  return async (dispatch) => {
+    const musicList = await fetchMusic(`영화 ${movie} OST song soundtrack`);
+    dispatch(setMusicList(musicList));
   };
 }
