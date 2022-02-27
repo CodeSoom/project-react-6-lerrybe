@@ -20,6 +20,17 @@ const MainIconImg = styled.img`
   &:nth-of-type(3) {
     margin: 0 35px 0 10px;
   }
+  @keyframes up-down {
+    from {
+      transform: translatey(0px);
+    }
+    to {
+      transform: translatey(-10px);
+    }
+  }
+  &:hover {
+    animation: up-down 0.5s infinite ease-in-out alternate;
+  }
 `;
 
 export default function MainIcon() {

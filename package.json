@@ -43,6 +43,8 @@
     "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@u-wave/react-youtube": "^0.7.2",
+    "axios": "^0.26.0",
     "css-loader": "^6.6.0",
     "dotenv": "^16.0.0",
     "file-loader": "^6.2.0",

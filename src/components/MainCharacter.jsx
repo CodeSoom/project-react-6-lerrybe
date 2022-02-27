@@ -19,6 +19,15 @@ const CharacterDiv = styled.div`
 const CharacterImg = styled.img`
   width: 210px;
   height: 210px;
+  @keyframes rotate {
+    from {
+      transform: rotate(-10deg);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+  animation: rotate 3s infinite ease-in-out alternate;
 `;
 
 const CharacterUserWrapDiv = styled.div`

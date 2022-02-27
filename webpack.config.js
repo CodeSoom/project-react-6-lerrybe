@@ -50,6 +50,16 @@ module.exports = {
     historyApiFallback: {
       index: 'index.html',
     },
+    proxy: {
+      '/v1': {
+        target: 'https://openapi.naver.com',
+        changeOrigin: true,
+      },
+      '/v3': {
+        target: 'https://www.googleapis.com/youtube',
+        changeOrigin: true,
+      },
+    },
   },
   mode: 'production',
   output: {
