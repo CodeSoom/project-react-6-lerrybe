@@ -1,5 +1,5 @@
 {
-  "homepage": "https://lerrybe.github.io/project-react-6-lerrybe/",
+  "homepage": "https://codesoom.github.io/project-react-6-lerrybe/",
   "name": "project-mifilm",
   "version": "1.0.0",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "lint": "eslint --ext js,jsx .",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --remote upstream"
   },
   "keywords": [],
   "author": "",
