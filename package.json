@@ -13,6 +13,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lerrybe/project-react-6-lerrybe.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
