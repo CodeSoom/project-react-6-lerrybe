@@ -3,20 +3,6 @@
   License: none (public domain)
 */
 
-@import '../img/boxoffice.svg';
-@import '../img/character.svg';
-@import '../img/cursor-input.svg';
-@import '../img/cursor-select.svg';
-@import '../img/cursor.svg';
-@import '../img/github.svg';
-@import '../img/home.svg';
-@import '../img/myost.svg';
-@import '../img/react.svg';
-@import '../img/search.svg';
-@import '../img/sound.svg';
-@import '../img/space.svg';
-@import '../img/velog.svg';
-
 @font-face {
 	font-family: 'DungGeunMo';
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
