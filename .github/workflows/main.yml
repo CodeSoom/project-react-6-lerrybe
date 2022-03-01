@@ -31,7 +31,7 @@ jobs:
       - name: Copy css
         run: |
           mkdir -p dist/css
-          cp css/* dist/css/
+          cp css/reset.css dist/css/
           
           
       - name: Copy img
