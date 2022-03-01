@@ -28,17 +28,6 @@ jobs:
         run: |
           cp index.html dist/index.html
         
-      - name: Copy css
-        run: |
-          mkdir -p dist/css
-          cp css/reset.css dist/css/
-          
-          
-      - name: Copy img
-        run: |
-          mkdir -p dist/img
-          cp img/* dist/img/
-        
       - name : Deploy
         uses : JamesIves/github-pages-deploy-action@v4.2.3 
         with :
