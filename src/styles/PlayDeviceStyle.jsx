@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import '../img/cursor-select.svg';
+import '../../public/img/cursor-select.svg';
 
 const PlayDevicediv = styled.div`
   width: 30%;
@@ -96,7 +96,7 @@ const PlayingButton = styled.button`
   margin: 5px;
   &:hover {
     background: rgba(52, 122, 26, 0.842);
-    cursor: url('../img/cursor-select.svg'), auto;
+    cursor: url('../../public/img/cursor-select.svg'), auto;
   }
 `;
 
@@ -116,7 +116,7 @@ const LikeButton = styled.button`
   margin: 5px;
   &:hover {
     background: rgba(160, 21, 21, 0.945);
-    cursor: url('../img/cursor-select.svg'), auto;
+    cursor: url('../../public/img/cursor-select.svg'), auto;
   }
 `;
 

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
 // images
-import github from '../img/github.svg';
-import react from '../img/react.svg';
-import velog from '../img/velog.svg';
+import github from '../../public/img/github.svg';
+import react from '../../public/img/react.svg';
+import velog from '../../public/img/velog.svg';
 
 import SubIconImg from '../styles/SubIconImg';
 

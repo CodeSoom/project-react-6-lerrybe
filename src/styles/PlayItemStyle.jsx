@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import '../img/cursor-select.svg';
+import '../../public/img/cursor-select.svg';
 
 const PlayboxDiv = styled.div`
   width: 100%;
@@ -14,7 +14,7 @@ const PlayboxDiv = styled.div`
 
   &:hover {
     background: linear-gradient(90deg, rgba(34, 131, 0, 0.6) 1.89%, rgba(153, 0, 0, 0.6) 100%);
-    cursor: url('../img/cursor-select.svg'), auto;
+    cursor: url('../../public/img/cursor-select.svg'), auto;
   }
 `;
 
