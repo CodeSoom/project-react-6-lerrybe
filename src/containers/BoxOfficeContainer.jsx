@@ -4,7 +4,7 @@ import { get } from '../utils/utils';
 
 import SelectMovies from '../components/SelectMovies';
 
-import boxoffice from '../../public/img/boxoffice.svg';
+import boxoffice from '../../assets/img/boxoffice.svg';
 
 import ContainerWrapDiv from '../styles/ContainerWrapDiv';
 import SubIconImg from '../styles/SubIconImg';

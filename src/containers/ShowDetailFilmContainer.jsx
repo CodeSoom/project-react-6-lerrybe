@@ -7,7 +7,7 @@ import { get } from '../utils/utils';
 
 import PlayItem from '../components/PlayItem';
 
-import boxoffice from '../../public/img/boxoffice.svg';
+import boxoffice from '../../assets/img/boxoffice.svg';
 
 import SubIconImg from '../styles/SubIconImg';
 import ContainerWrapDiv from '../styles/ContainerWrapDiv';

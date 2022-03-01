@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 
 import styled from '@emotion/styled';
 
-import home from '../../public/img/home.svg';
-import boxoffice from '../../public/img/boxoffice.svg';
-import search from '../../public/img/search.svg';
-import myost from '../../public/img/myost.svg';
+import home from '../../assets/img/home.svg';
+import boxoffice from '../../assets/img/boxoffice.svg';
+import search from '../../assets/img/search.svg';
+import myost from '../../assets/img/myost.svg';
 
 const NavigationDiv = styled.div`
   width: 200px;

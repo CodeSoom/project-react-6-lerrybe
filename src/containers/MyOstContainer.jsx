@@ -6,7 +6,7 @@ import { setSelectedMusic } from '../_actions/actions';
 
 import { get } from '../utils/utils';
 
-import myost from '../../public/img/myost.svg';
+import myost from '../../assets/img/myost.svg';
 
 import PlayItem from '../components/PlayItem';
 

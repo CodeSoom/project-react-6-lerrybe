@@ -8,7 +8,7 @@ import { loadSearchedMovieList } from '../_actions/actions';
 
 import { get } from '../utils/utils';
 
-import search from '../../public/img/search.svg';
+import search from '../../assets/img/search.svg';
 
 import ContainerWrapDiv from '../styles/ContainerWrapDiv';
 import { ContentsSubTitleDiv, ContentsTitleDiv, ContentsTitleWrapDiv } from '../styles/ContentsTitleDiv';
