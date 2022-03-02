@@ -1,10 +1,17 @@
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
+const webpack = require('webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index.jsx'),
   plugins: [
-    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_KOFIC_API_KEY': JSON.stringify(process.env.REACT_APP_KOFIC_API_KEY),
+      'process.env.REACT_APP_NAVER_MOVIE_CLIENT_ID': JSON.stringify(process.env.REACT_APP_NAVER_MOVIE_CLIENT_ID),
+      'process.env.REACT_APP_NAVER_MOVIE_CLIENT_SECRET': JSON.stringify(process.env.REACT_APP_NAVER_MOVIE_CLIENT_SECRET),
+      'process.env.REACT_APP_YOUTUBE_API_KEY_FIRST': JSON.stringify(process.env.REACT_APP_YOUTUBE_API_KEY_FIRST),
+      'process.env.REACT_APP_YOUTUBE_API_KEY_SECOND': JSON.stringify(process.env.REACT_APP_YOUTUBE_API_KEY_SECOND),
+      'process.env.PUBLIC_URL': JSON.stringify(process.env.API_KEY),
+    }),
   ],
   module: {
     rules: [

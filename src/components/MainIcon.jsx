@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 // images
-import home from '../img/home.svg';
-import boxoffice from '../img/boxoffice.svg';
-import search from '../img/search.svg';
-import myost from '../img/myost.svg';
+import home from '../../assets/img/home.svg';
+import boxoffice from '../../assets/img/boxoffice.svg';
+import search from '../../assets/img/search.svg';
+import myost from '../../assets/img/myost.svg';
 
 const MainIconWrapDiv = styled.div`
   display: flex;

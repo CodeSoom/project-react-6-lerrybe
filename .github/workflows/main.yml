@@ -1,0 +1,50 @@
+name: Deploy
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Generate Environment Variables File for Production
+        run: |
+          echo "REACT_APP_KOFIC_API_KEY=$REACT_APP_KOFIC_API_KEY" >> .env.production
+          echo "REACT_APP_NAVER_MOVIE_CLIENT_ID=$REACT_APP_NAVER_MOVIE_CLIENT_ID" >> .env.production
+          echo "REACT_APP_NAVER_MOVIE_CLIENT_SECRET=$REACT_APP_NAVER_MOVIE_CLIENT_SECRET" >> .env.production
+          echo "REACT_APP_YOUTUBE_API_KEY_FIRST=$REACT_APP_YOUTUBE_API_KEY_FIRST" >> .env.production
+          echo "REACT_APP_YOUTUBE_API_KEY_SECOND=$REACT_APP_YOUTUBE_API_KEY_SECOND" >> .env.production
+          echo "PUBLIC_URL=$PUBLIC_URL" >> .env.production
+          
+        env:
+          REACT_APP_KOFIC_API_KEY: ${{ secrets.REACT_APP_KOFIC_API_KEY }}
+          REACT_APP_NAVER_MOVIE_CLIENT_ID: ${{ secrets.REACT_APP_NAVER_MOVIE_CLIENT_ID }}
+          REACT_APP_NAVER_MOVIE_CLIENT_SECRET: ${{ secrets.REACT_APP_NAVER_MOVIE_CLIENT_SECRET }}
+          REACT_APP_YOUTUBE_API_KEY_FIRST: ${{ secrets.REACT_APP_YOUTUBE_API_KEY_FIRST }}
+          REACT_APP_YOUTUBE_API_KEY_SECOND: ${{ secrets.REACT_APP_YOUTUBE_API_KEY_SECOND }}
+          PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
+  
+      - name: Install and Build
+        run: |
+          npm ci
+          npm install
+ 
+      - name: Build React Application
+        run: npm run build
+        
+      - name : Deploy
+        uses : JamesIves/github-pages-deploy-action@v4.2.3 
+        with :
+          branch : gh-pages
+          folder : dist

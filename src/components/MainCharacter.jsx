@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import character from '../img/character.svg';
+import character from '../../assets/img/character.svg';
 import UserInputFormContainer from '../containers/UserInputFormContainer';
 
 const CharacterWrapDiv = styled.div`

@@ -6,7 +6,7 @@ import YouTube from '@u-wave/react-youtube';
 import { get } from '../utils/utils';
 import { setLikedMusicList } from '../_actions/actions';
 
-import sound from '../img/sound.svg';
+import sound from '../../assets/img/sound.svg';
 
 import { ContentsTitleDiv } from '../styles/ContentsTitleDiv';
 import {
