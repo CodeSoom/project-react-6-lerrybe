@@ -1,6 +1,8 @@
 name: Deploy
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   build:
@@ -44,6 +46,17 @@ jobs:
       - name: Copy index.html
         run: |
           cp index.html dist/index.html
+          cp dist/index.html dist/404.html
+          
+      - name: Copy css
+        run: |
+          mkdir -p dist/assets/css
+          cp assets/css/* dist/assets/css/
+          
+      - name: Copy img
+        run: |
+          mkdir -p dist/assets/img
+          cp assets/img/* dist/assets/img/
         
       - name : Deploy
         uses : JamesIves/github-pages-deploy-action@v4.2.3 
