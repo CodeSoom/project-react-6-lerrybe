@@ -1,8 +1,6 @@
 name: Deploy
 
-on:
-  push:
-    branches: [ main ]
+on: [push]
 
 jobs:
   build:
@@ -37,26 +35,13 @@ jobs:
           REACT_APP_YOUTUBE_API_KEY_SECOND: ${{ secrets.REACT_APP_YOUTUBE_API_KEY_SECOND }}
           PUBLIC_URL: ${{ secrets.PUBLIC_URL }}
   
-      - name: Install
-        run: npm ci
-        
-      - name: Build
+      - name: Install and Build
+        run: |
+          npm ci
+          npm install
+ 
+      - name: Build React Application
         run: npm run build
-      
-      - name: Copy index.html
-        run: |
-          cp index.html dist/index.html
-          cp dist/index.html dist/404.html
-          
-      - name: Copy css
-        run: |
-          mkdir -p dist/assets/css
-          cp assets/css/* dist/assets/css/
-          
-      - name: Copy img
-        run: |
-          mkdir -p dist/assets/img
-          cp assets/img/* dist/assets/img/
         
       - name : Deploy
         uses : JamesIves/github-pages-deploy-action@v4.2.3 
